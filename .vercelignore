@@ -1,0 +1,10 @@
+scripts/
+upload/
+db/
+skills/
+agent-ctx/
+worklog.md
+*.log
+README.md
+.env*
+.vercel

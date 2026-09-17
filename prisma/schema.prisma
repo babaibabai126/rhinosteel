@@ -1,0 +1,23 @@
+// Prisma schema for Rhino Steel website
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// "How can I help you" enquiry form submissions
+model Enquiry {
+  id         String   @id @default(cuid())
+  name       String
+  phone      String
+  email      String?
+  product    String
+  message    String?
+  status     String   @default("new") // new | contacted | closed
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
