@@ -64,3 +64,5 @@ server.log
 /prisma/dev.db
 *.sqlite
 *.sqlite3
+# root-level leftover image candidates
+/peb_c*.jpg
